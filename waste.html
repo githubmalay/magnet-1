@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Store</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="cart.css">
+  <style>
+    /* Custom styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .navbar {
+      background-color: #343a40;
+      color: #ffffff;
+    }
+    .navbar-brand {
+      font-size: 24px;
+    }
+    .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+    .mains {
+      margin: 15px;
+    }
+    /* Product card styles */
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 15px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      overflow: hidden;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px 8px 0 0;
+    }
+    .product-card h2 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .product-card p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .add-to-cart {
+      padding: 8px 16px;
+      border: none;
+      background-color: #007bff;
+      color: #ffffff;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .add-to-cart:hover {
+      background-color: #0056b3;
+    }
+    /* Responsive Design */
+    @media (max-width: 991px) {
+      .product-card {
+        flex-basis: calc(33.333% - 30px);
+      }
+    }
+    @media (max-width: 767px) {
+      .product-card {
+        flex-basis: calc(50% - 30px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">EYEWEAR</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"><i class="fas fa-home fa-lg"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html"><i class="fas fa-user fa-lg"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin_dashboard.html"><i class="fas fa-cogs fa-lg"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mains">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="product-card">
+            <img src="product1.jpg" alt="Product 1">
+            <h2>Sun-Wear</h2>
+            <p>₹1499</p>
+            <button class="add-to-cart" data-product-name="Sun-Wear" data-product-price="1499" data-product-image="product1.jpg">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Add more product cards here -->
+        <div class="container">
+          <h1>Add Product</h1>
+          <div id="product-grid"class="product-grid"></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Footer content here -->
+      </div>
+      <p class="text-center">&copy; 2024 EYEWEAR. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <script src="product.js"></script>
+  <script src="script1.js"></script>
+</body>
+</html>
